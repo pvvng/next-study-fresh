@@ -1,19 +1,18 @@
-import CartItem from "@/components/cart-item";
-
 export default function Cart() {
+  let 장바구니 = ['Tomatoes', 'Pasta'];
   return (
     <div>
       <h4 className="title">Cart</h4>
-      <CartItem />
-      <CartItem />
+      <CartItem 상품={장바구니[0]} />
+      <CartItem 상품={장바구니[1]} />
     </div>
   )
 } 
 
-export default function CartItem(){
+function CartItem(props){
   return (
     <div className="cart-item">
-      <p>상품명</p>
+      <p>{props.상품}</p>
       <p>$40</p>
       <p>1개</p>
     </div>
